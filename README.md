@@ -7,7 +7,6 @@ This project demonstrates how to create and configure network namespaces, virtua
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
 
 ---
 
@@ -27,9 +26,10 @@ This setup allows testing network connectivity between the two namespaces throug
 To run this project, you need:
 - A Linux-based operating system (e.g., Ubuntu, Debian, CentOS).
 - Administrative privileges (sudo access).
-- Basic knowledge of Linux networking commands.
 
 ---
+![network-namespace](https://github.com/user-attachments/assets/68972a1d-8c63-45a9-b9f9-cadf1a31f3cf)
+
 
 ## Setup
 
@@ -40,7 +40,3 @@ The setup is automated using a Makefile. The following steps are performed:
 4. **Assign IP Addresses**: IP addresses are assigned to the interfaces within the namespaces.
 5. **Enable IP Forwarding**: IP forwarding is enabled in the router namespace to allow traffic between `ns1` and `ns2`.
 6. **Set Default Routes**: Default routes are configured in `ns1` and `ns2` to route traffic through the router.
-
-To run the setup, execute the following command:
-```bash
-make setup
